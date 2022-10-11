@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MIPT(2)</string>
+    <string-array name="select_options">
+        <item>Symbols</item>
+        <item>Words</item>
+    </string-array>
+</resources>
