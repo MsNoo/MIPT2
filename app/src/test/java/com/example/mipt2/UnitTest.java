@@ -65,8 +65,8 @@ public class UnitTest {
     //string with letters only
     @Test
     public void Given_String_When_removeNumbersFromStringIsCalledWithLettersOnly_Then_ReturnedInitialString(){
-        final String givenString = "xyz";
-        final String expectedResult = "xyz";
+        final String givenString = "abc";
+        final String expectedResult = "abc";
         final String actualResult = Utils.removeNumbersFromString(givenString);
 
         assertEquals(expectedResult, actualResult);
@@ -75,8 +75,8 @@ public class UnitTest {
     //string with letters and numbers
     @Test
     public void Given_String_When_removeNumbersFromStringIsCalledWithLettersAndNumbers_Then_ReturnedStringWithLettersOnly(){
-        final String givenString = "x2y3z";
-        final String expectedResult = "xyz";
+        final String givenString = "a1b2c";
+        final String expectedResult = "abc";
         final String actualResult = Utils.removeNumbersFromString(givenString);
 
         assertEquals(expectedResult, actualResult);
@@ -85,7 +85,7 @@ public class UnitTest {
     //string with numbers only
     @Test
     public void Given_String_When_removeNumbersFromStringIsCalledWithNumbersOnly_Then_ReturnedEmptyString(){
-        final String givenString = "234";
+        final String givenString = "123";
         final String expectedResult = "";
         final String actualResult = Utils.removeNumbersFromString(givenString);
 
@@ -115,6 +115,26 @@ public class UnitTest {
     public void Given_String_When_removeLettersFromStringIsCalledWithLettersOnly_Then_ReturnedEmptyString(){
         final String givenString = "abc";
         final String expectedResult = "";
+        final String actualResult = Utils.removeLettersFromString(givenString);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    //string with numbers only
+    @Test
+    public void Given_String_When_removeLettersFromStringIsCalledWithNumbersOnly_Then_ReturnedInitialString(){
+        final String givenString = "123";
+        final String expectedResult = "123";
+        final String actualResult = Utils.removeLettersFromString(givenString);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    //string with letters and numbers
+    @Test
+    public void Given_String_When_removeLettersFromStringIsCalledWithLettersAndNumbers_Then_ReturnedStringWithNumbersOnly(){
+        final String givenString = "a1b2c3";
+        final String expectedResult = "123";
         final String actualResult = Utils.removeLettersFromString(givenString);
 
         assertEquals(expectedResult, actualResult);
