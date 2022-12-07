@@ -14,7 +14,7 @@ public class Calc {
             return 0;
         }
         else{
-            return words.split("\\w+").length;
+            return words.split("\\s+").length;
         }
     }
 }
